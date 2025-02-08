@@ -6,7 +6,7 @@
 /*   By: selmandemir <selmandemir@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/30 05:49:46 by muhademi          #+#    #+#             */
-/*   Updated: 2025/02/08 16:05:09 by selmandemir      ###   ########.fr       */
+/*   Updated: 2025/02/08 16:18:30 by selmandemir      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ void	check_data(t_game *game)
 			place_fc(game -> F, game -> map[i]);
 		else if (ft_strnstr(game ->map[i], "C ", 2))
 			place_fc(game->C, game -> map[i]);
-		else if (!str_isWhiteSpace(game ->map[i]) && game -> map_start == -1)
+		else if (!str_isSpace(game ->map[i]) && game -> map_start == -1)
 			game -> map_start = i;
 		i++;
 	}
@@ -86,7 +86,7 @@ void	check_and_get_sth(t_game *game)
 				game -> player_d = ((game -> map[i][j]) - 69) / 6;
 				count += 1;
 			}
-			else if (game ->map[i][j] != '1' && game ->map[i][j] != '0' && !isWhiteSpace(game -> map[i][j]))
+			else if (game ->map[i][j] != '1' && game ->map[i][j] != '0' && game -> map[i][j] != 32)
 				ft_error(12);
 			j += 1;
 		}

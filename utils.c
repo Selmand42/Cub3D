@@ -6,33 +6,24 @@
 /*   By: selmandemir <selmandemir@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 01:28:20 by selmandemir       #+#    #+#             */
-/*   Updated: 2025/02/08 15:49:35 by selmandemir      ###   ########.fr       */
+/*   Updated: 2025/02/08 16:17:55 by selmandemir      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3D.h"
 
-int	isWhiteSpace(int c)
-{
-	if (c >= 9 && c <= 13)
-		return (1);
-	if (c == 0 || c == 32)
-		return (1);
-	return (0);
-}
-
-int	str_isWhiteSpace(char *s)
+int	str_isSpace(char *s)
 {
 	int	i;
 
 	i = 0;
 	while (s[i])
 	{
-		if (isWhiteSpace(s[i]))
-			return (1);
+		if (s[i] != 32)
+			return (0);
 		i++;
 	}
-	return (0);
+	return (1);
 }
 
 int	counter(char *str, char c)

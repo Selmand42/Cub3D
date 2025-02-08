@@ -6,7 +6,7 @@
 /*   By: selmandemir <selmandemir@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/30 10:34:32 by muhademi          #+#    #+#             */
-/*   Updated: 2025/02/08 16:05:30 by selmandemir      ###   ########.fr       */
+/*   Updated: 2025/02/08 16:17:05 by selmandemir      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,8 +64,7 @@ int		exit_game(t_game *game);
 int		get_fd(char *path);
 
 void	place_fc(int arr[4], char *s);
-int		isWhiteSpace(int c);
-int		str_isWhiteSpace(char *s);
+int		str_isSpace(char *s);
 int		dfs(t_game *game, int x, int y, char **visited);
 char	**copy_map(t_game *game);
 void	check_borders(t_game *game);
